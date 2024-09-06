@@ -1,16 +1,3 @@
-import { Button } from "@/components/ui/button";
-
-export default function Home() {
-  return (
-    <div>
-      <h1 className="text-3xl">home</h1>
-      <Button>click me</Button>
-    </div>
-  );
-}
-
-/*
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,7 +21,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
             className="mb-12 h-10 w-fit"
           />
 
-          <PatientForm />
+          {/* <PatientForm /> */}
 
           <div className="text-14-regular mt-20 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
@@ -59,5 +46,3 @@ const Home = ({ searchParams }: SearchParamProps) => {
 };
 
 export default Home;
-
-*/
