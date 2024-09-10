@@ -33,6 +33,7 @@ const AdminPage = async () => {
           </p>
         </section>
 
+        {/* for displaying the data */}
         <section className="admin-stat">
           <StatCard
             type="appointments"
@@ -59,5 +60,11 @@ const AdminPage = async () => {
     </div>
   );
 };
+
+// const AdminPage =()=>{
+//   return(
+//     <div>admin Pannel</div>
+//   )
+// }
 
 export default AdminPage;

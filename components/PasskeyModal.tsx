@@ -23,15 +23,21 @@ import { decryptKey, encryptKey } from "@/lib/utils";
 export const PasskeyModal = () => {
   const router = useRouter();
   const path = usePathname();
+  // for opening and closing of dialogue
   const [open, setOpen] = useState(false);
+  // for registering the input on otp
   const [passkey, setPasskey] = useState("");
+  // if error in the passkey 
   const [error, setError] = useState("");
 
+
+  // WE don't want the admin to sign-in again so we get key from local storage
   const encryptedKey =
     typeof window !== "undefined"
       ? window.localStorage.getItem("accessKey")
       : null;
 
+      // if we have key in local storage then redilect us to the admin page w/o entering the passkey again
   useEffect(() => {
     const accessKey = encryptedKey && decryptKey(encryptedKey);
 
